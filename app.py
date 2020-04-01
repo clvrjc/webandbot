@@ -300,8 +300,8 @@ def Get_Started(greeting_text):
 	print(bot.set_persistent_menu(pm_menu))
 	print('testing')
 
-greetInGetStarted = "Hi {{user_first_name}}!, Thank you for getting in touch with me. Please send me any question you may have."
-Get_Started(greetInGetStarted)#Dynamic Greetings
+#greetInGetStarted = "Hi {{user_first_name}}!, Thank you for getting in touch with me. Please send me any question you may have."
+#Get_Started(greetInGetStarted)#Dynamic Greetings
 
 #bot.remove_get_started()
 #bot.remove_persistent_menu()
