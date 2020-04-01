@@ -54,7 +54,7 @@ def receive_message():
 				elif message.get("postback"):  # user clicked/tapped "postback" button in earlier message
 					received_postback(message)
 					
-	return "Message Processed"
+	return render_template('index.html')
 
 def verify_fb_token(token_sent):
 	#take token sent by facebook and verify it matches the verify token you sent
@@ -63,7 +63,7 @@ def verify_fb_token(token_sent):
 		return request.args.get("hub.challenge"), 200
 	else:
 		return "Verification token mismatch", 403
-	return render_template('index.html')
+	
 #===============================================================Personal Website==============================================================================
 
 # Terms of Service page, required for Facebook App Review
