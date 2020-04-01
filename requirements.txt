@@ -1,0 +1,6 @@
+Flask
+gunicorn==19.6.0
+pymongo[srv]
+requests
+six
+requests_toolbelt
