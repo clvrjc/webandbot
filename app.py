@@ -54,15 +54,15 @@ def receive_message():
 				elif message.get("postback"):  # user clicked/tapped "postback" button in earlier message
 					received_postback(message)
 					
-	return render_template('index.html')
+	return "Message Process"
 
 def verify_fb_token(token_sent):
 	#take token sent by facebook and verify it matches the verify token you sent
 	#if they match, allow the request, else return an error 
 	if token_sent == VERIFY_TOKEN:
 		return request.args.get("hub.challenge"), 200
-	else:
-		return "Verification token mismatch", 403
+	
+	render_template('index.html')
 	
 #===============================================================Personal Website==============================================================================
 
